@@ -15,6 +15,7 @@ function App() {
         <Route path="/" exact component={Home} />
         {/* <Route path="/about" /> */}
       </Switch>
+      <Home />
       <Header/>
       
       <Footer/>

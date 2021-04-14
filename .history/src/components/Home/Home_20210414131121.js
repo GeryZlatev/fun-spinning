@@ -1,4 +1,4 @@
-import {Container, Row} from 'react-bootstrap';
+import {Container, Row, Image } from 'react-bootstrap';
 import style from './Home.module.css';
 import imageThree from '../../media/IMG_0271 2.JPG'
 

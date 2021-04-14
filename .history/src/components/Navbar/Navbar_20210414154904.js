@@ -3,14 +3,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import {  withRouter} from 'react-router-dom';
 
+import Home from '../Home';
+
 const CustomNavbar = ({ history }) => {
     const onSelectHandler = (path) => {
         return history.push(path)
     }
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
             <Navbar.Brand href="/home">FunSpinning</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            {/* add as -> set a custom element for this component */}
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
                     <Nav.Link

@@ -11,6 +11,7 @@ const CustomNavbar = ({ history }) => {
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Navbar.Brand href="/home">FunSpinning</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            {/* add as -> set a custom element for this component */}
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
                     <Nav.Link
