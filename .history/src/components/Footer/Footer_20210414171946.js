@@ -32,24 +32,9 @@ const Footer = ({history}) => {
                 </Col>
                 <Col>
             <Nav defaultActiveKey="/home" className="flex-column">
-            <Nav.Link
-                onSelect={(_, e) => {
-                    e.preventDefault();
-                    helpers.onSelectLinkHandler('/about', history)
-                }}
-                href="/about">About Us</Nav.Link>
-            <Nav.Link
-                onSelect={(_, e) => {
-                    e.preventDefault();
-                    helpers.onSelectLinkHandler('/about-spinning', history)
-                }}
-                href="/about-spinning">About Spinning</Nav.Link>
-            <Nav.Link
-                onSelect={(_, e) => {
-                    e.preventDefault();
-                    helpers.onSelectLinkHandler('/spinning-history', history)
-                }}
-                href="/spinning-history">Spinning History</Nav.Link>
+            <Nav.Link href="/about">About Us</Nav.Link>
+            <Nav.Link href="/about-spinning">About Spinning</Nav.Link>
+            <Nav.Link href="/spinning-history">Spinning History</Nav.Link>
         </Nav>
                 </Col>
             </Row>

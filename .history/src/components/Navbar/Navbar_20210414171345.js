@@ -5,7 +5,9 @@ import { withRouter } from 'react-router-dom';
 import * as helpers from '../../helpers/linkHelpers';
 
 const CustomNavbar = ({ history }) => {
-
+    // const onSelectLinkHandler = (path) => {
+    //     return history.push(path)
+    // }
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Navbar.Brand href="/home">FunSpinning</Navbar.Brand>
@@ -21,26 +23,26 @@ const CustomNavbar = ({ history }) => {
                     <Nav.Link
                         onSelect={(_, e) => {
                         e.preventDefault();
-                        helpers.onSelectLinkHandler('/about', history);
+                        // onSelectLinkHandler('/about');
                         }}
                         href="/about">About</Nav.Link>
                     <NavDropdown title="Blog" id="collasible-nav-dropdown">
                         <NavDropdown.Item
                             onSelect={(_, e) => {
                                 e.preventDefault();
-                                helpers.onSelectLinkHandler('/sport', history);
+                                // onSelectLinkHandler('/sport');
                             }}
                             href="/sport">Sport</NavDropdown.Item>
                         <NavDropdown.Item
                             onSelect={(_, e) => {
                                 e.preventDefault();
-                                helpers.onSelectLinkHandler('/spinning-class', history);
+                                // onSelectLinkHandler('/spinning-class');
                             }}
                             href="/spinning">Spinning class</NavDropdown.Item>
                         <NavDropdown.Item
                             onSelect={(_, e) => {
                                 e.preventDefault();
-                                helpers.onSelectLinkHandler('/nutrition', history);
+                                // onSelectLinkHandler('/nutrition');
                             }}
                             href="/nutrition">Nutrition</NavDropdown.Item>
                 </NavDropdown>
@@ -49,13 +51,13 @@ const CustomNavbar = ({ history }) => {
                     <Nav.Link
                         onSelect={(_, e) => {
                             e.preventDefault();
-                            helpers.onSelectLinkHandler('/sign-up', history)
+                            // onSelectLinkHandler('/sign-up')
                         }}
                         href="/sign-up">Sign up</Nav.Link>
                     <Nav.Link
                         onSelect={(_, e) => {
                             e.preventDefault();
-                            helpers.onSelectLinkHandler('/sign-in', history)
+                            // onSelectHandler('/sign-in')
                         }}
                         href="/sign-in">Sign in</Nav.Link>
                 </Nav>

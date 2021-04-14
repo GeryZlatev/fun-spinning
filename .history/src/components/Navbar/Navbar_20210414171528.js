@@ -55,7 +55,7 @@ const CustomNavbar = ({ history }) => {
                     <Nav.Link
                         onSelect={(_, e) => {
                             e.preventDefault();
-                            helpers.onSelectLinkHandler('/sign-in', history)
+                            helpers.onSelectHandler('/sign-in', history)
                         }}
                         href="/sign-in">Sign in</Nav.Link>
                 </Nav>
