@@ -4,8 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-
-import SignUp from './components/Auth/SignUp';
+import Header from './Shared/Header';
 import Footer from './components/Footer';
 
 function App() {
@@ -15,8 +14,10 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         {/* <Route path="/about" /> */}
-        <Route path="/sign-up" component={ SignUp}/>
+        <Route path="/sign-up" />
       </Switch>
+      <Header/>
+      
       <Footer/>
     </div>
   );

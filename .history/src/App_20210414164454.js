@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-
+import Header from './Shared/Header';
 import SignUp from './components/Auth/SignUp';
 import Footer from './components/Footer';
 
@@ -17,6 +17,8 @@ function App() {
         {/* <Route path="/about" /> */}
         <Route path="/sign-up" component={ SignUp}/>
       </Switch>
+      <Header/>
+      
       <Footer/>
     </div>
   );

@@ -1,7 +1,7 @@
 import {Container, Row} from 'react-bootstrap';
 import style from './Home.module.css';
 import imageThree from '../../media/IMG_0271 2.JPG';
-import Header from '../../Shared/Header';
+import Header from './Shared/Header';
 
 
 const Home = () => {
