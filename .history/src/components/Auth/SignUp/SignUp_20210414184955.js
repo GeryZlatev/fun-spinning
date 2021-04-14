@@ -1,10 +1,9 @@
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useState } from 'react';
-import { withRouter } from 'react-router-dom';
 import style from './SignUp.module.css';
 import * as serviceDB from '../../../services/serviceDB';
 
-const SignUp = ({history}) => {
+const SignUp = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [rePassword, setRePassword] = useState('');
@@ -16,7 +15,6 @@ const SignUp = ({history}) => {
     const clearErrors = () => {
         setPasswordErr('');
         setEmailError('');
-        setRePassErr('');
     }
 
     const clearInputs = () => {
@@ -31,8 +29,7 @@ const SignUp = ({history}) => {
             .then(res => {
                 clearInputs();
                 clearErrors();
-                setSuccess(true);
-                history.push('/sign-in')
+                setSuccess(true)
             });
     }
     return (
@@ -96,4 +93,4 @@ const SignUp = ({history}) => {
     )
 }
 
-export default withRouter(SignUp);
+export default SignUp;

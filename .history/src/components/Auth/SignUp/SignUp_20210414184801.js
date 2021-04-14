@@ -1,22 +1,19 @@
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useState } from 'react';
-import { withRouter } from 'react-router-dom';
 import style from './SignUp.module.css';
 import * as serviceDB from '../../../services/serviceDB';
 
-const SignUp = ({history}) => {
+const SignUp = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [rePassword, setRePassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordErr] = useState('');
-    const [rePassErr, setRePassErr] = useState('');
     const [success, setSuccess] = useState(false);
 
     const clearErrors = () => {
         setPasswordErr('');
         setEmailError('');
-        setRePassErr('');
     }
 
     const clearInputs = () => {
@@ -31,8 +28,7 @@ const SignUp = ({history}) => {
             .then(res => {
                 clearInputs();
                 clearErrors();
-                setSuccess(true);
-                history.push('/sign-in')
+                setSuccess(true)
             });
     }
     return (
@@ -76,18 +72,18 @@ const SignUp = ({history}) => {
                     <Form.Control
                         onBlur={(e) => {
                             if (password !== rePassword) {
-                                setRePassErr('Passwords missmatch!');
+                                setPasswordErr('Passwords missmatch!');
                                 setPassword('')
                                 setRePassword('')
                             } else {
-                                setRePassErr('')
+                                setPasswordErr('')
                             }
                         }}
                         onChange={(e) => setRePassword(e.target.value)}
                         value={rePassword}
                         type="password" placeholder="Confirm password" />
                 </Form.Group>
-                {rePassErr ? <Alert variant="danger">{ rePassErr}</Alert> : null}
+                {passwordError ? <Alert variant="danger">{ passwordError}</Alert> : null}
             <Button variant="dark" type="submit">
                 Sign up
             </Button>
@@ -96,4 +92,4 @@ const SignUp = ({history}) => {
     )
 }
 
-export default withRouter(SignUp);
+export default SignUp;
