@@ -1,0 +1,15 @@
+.sign-in-form-wrapper {
+    max-width: 40%;
+    margin: 50px auto;
+    border: 1px solid #CFD4D9;
+    border-radius: 5px;
+    padding: 40px 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .sign-in-form-wrapper {
+        max-width: 90%;
+        margin: 50px auto;
+        
+    }
+}

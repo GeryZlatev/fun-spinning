@@ -47,7 +47,6 @@ const SignUp = ({history}) => {
             <Form.Group controlId="formGroupEmail">
                 <Form.Label>Email address</Form.Label>
                     <Form.Control
-                        onFocus={() => setSuccess(true)}
                         onBlur={(e) => {
                             const currEmail = e.target.value;
                             if (!currEmail.includes('@')) {
@@ -99,7 +98,6 @@ const SignUp = ({history}) => {
                 Sign up
             </Button>
             </Form>
-            <br/>
             {!success ?  <Alert variant="warning">Something went wrong! We're so sorry. Please fill all inputs and try again!</Alert> : null}
 </div>
     )

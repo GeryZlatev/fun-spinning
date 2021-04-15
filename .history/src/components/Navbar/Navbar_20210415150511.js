@@ -9,6 +9,7 @@ const CustomNavbar = ({ history }) => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Navbar.Brand
+                as="button"
                 onClick={(e) => {
                         e.preventDefault();
                         helpers.onSelectLinkHandler('/', history);

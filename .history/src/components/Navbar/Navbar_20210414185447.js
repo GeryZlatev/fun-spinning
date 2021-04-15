@@ -8,12 +8,7 @@ const CustomNavbar = ({ history }) => {
 
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Navbar.Brand
-                onClick={(e) => {
-                        e.preventDefault();
-                        helpers.onSelectLinkHandler('/', history);
-                        }}
-                href="/">FunSpinning</Navbar.Brand>
+            <Navbar.Brand href="/home">FunSpinning</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">

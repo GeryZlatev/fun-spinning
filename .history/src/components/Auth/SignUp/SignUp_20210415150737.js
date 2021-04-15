@@ -11,7 +11,7 @@ const SignUp = ({history}) => {
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordErr] = useState('');
     const [rePassErr, setRePassErr] = useState('');
-    const [success, setSuccess] = useState(true);
+    const [success, setSuccess] = useState(false);
 
     const clearErrors = () => {
         setPasswordErr('');
@@ -40,14 +40,12 @@ const SignUp = ({history}) => {
                 clearErrors();
             });
     }
-
     return (
 <div className={style["sign-up-form-wrapper"]}>
         <Form onSubmit={onSubmitHandler}>
             <Form.Group controlId="formGroupEmail">
                 <Form.Label>Email address</Form.Label>
                     <Form.Control
-                        onFocus={() => setSuccess(true)}
                         onBlur={(e) => {
                             const currEmail = e.target.value;
                             if (!currEmail.includes('@')) {
@@ -98,9 +96,7 @@ const SignUp = ({history}) => {
             <Button variant="dark" type="submit">
                 Sign up
             </Button>
-            </Form>
-            <br/>
-            {!success ?  <Alert variant="warning">Something went wrong! We're so sorry. Please fill all inputs and try again!</Alert> : null}
+        </Form>
 </div>
     )
 }

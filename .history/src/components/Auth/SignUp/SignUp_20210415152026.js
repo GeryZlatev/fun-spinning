@@ -99,7 +99,6 @@ const SignUp = ({history}) => {
                 Sign up
             </Button>
             </Form>
-            <br/>
             {!success ?  <Alert variant="warning">Something went wrong! We're so sorry. Please fill all inputs and try again!</Alert> : null}
 </div>
     )
