@@ -22,12 +22,12 @@ const SignIn = ({history}) => {
         e.preventDefault();
         serviceDB.signIn(email, password)
             .then((res) => {
-                const currUser = 
-                {user: res.user.email,
-                refreshToken: res.user.refreshToken,
-                isNew: res.additionalUserInfo.isNewUser,
-                uid: res.user.uid}
-                authContext.currentUser = currUser;
+                // const currUser = 
+                // {user: res.user.email,
+                // refreshToken: res.user.refreshToken,
+                // isNew: res.additionalUserInfo.isNewUser,
+                // uid: res.user.uid}
+                authContext.user = res.user.email;
                 console.log(authContext)
                 setSuccess(true);
                 setErrorSignIn('')

@@ -55,7 +55,7 @@ const CustomNavbar = ({ history }) => {
                             href="/nutrition">Nutrition</NavDropdown.Item>
                 </NavDropdown>
                 </Nav>
-                {!authContext.currentUser.user? 
+                {authContext.value.userCredentials? <>
                     <Nav>
                     <Nav.Link
                         onSelect={(_, e) => {
@@ -70,10 +70,13 @@ const CustomNavbar = ({ history }) => {
                         }}
                         href="/sign-in">Sign in</Nav.Link>
                     </Nav>
-                
-                : <Nav>
+                </> : <Nav>
                     <Nav.Link
-                        href="/sign-up">Sign out</Nav.Link> </Nav>} 
+                        // onSelect={(_, e) => {
+                        //     e.preventDefault();
+                        //     helpers.onSelectLinkHandler('/sign-up', history)
+                        // }}
+                        href="/sign-up">Sign out</Nav.Link> </Nav>}
                 
         
                 

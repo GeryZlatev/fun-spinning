@@ -13,7 +13,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
-      <AuthContext.Provider value={{currentUser: {}}}>
+      <AuthContext.Provider value={{user: '', isNew: false, uid: '', refreshToken: ''}}>
       <Navbar />
       <Switch>
         <Route path="/" exact component={Home} />

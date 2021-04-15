@@ -27,7 +27,7 @@ const SignIn = ({history}) => {
                 refreshToken: res.user.refreshToken,
                 isNew: res.additionalUserInfo.isNewUser,
                 uid: res.user.uid}
-                authContext.currentUser = currUser;
+                authContext.userCredentials = currUser;
                 console.log(authContext)
                 setSuccess(true);
                 setErrorSignIn('')

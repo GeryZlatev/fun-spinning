@@ -11,7 +11,7 @@ const SignIn = ({history}) => {
     const [success, setSuccess] = useState(true);
     const [errorSignIn, setErrorSignIn] = useState('');
 
-    const authContext = useContext(AuthContext);
+    const {user, refreshToken, isNew, uid} = useContext(AuthContext);
 
     const clearInputs = () => {
         setEmail('');
@@ -22,13 +22,11 @@ const SignIn = ({history}) => {
         e.preventDefault();
         serviceDB.signIn(email, password)
             .then((res) => {
-                const currUser = 
-                {user: res.user.email,
-                refreshToken: res.user.refreshToken,
-                isNew: res.additionalUserInfo.isNewUser,
-                uid: res.user.uid}
-                authContext.currentUser = currUser;
-                console.log(authContext)
+                user = res.user.email;
+                refreshToken = res.user.refreshToken;
+                isNew = res.additionalUserInfo.isNewUser;
+                uid = res.user.uid
+                console.log(user, refreshToken, isNew, uid)
                 setSuccess(true);
                 setErrorSignIn('')
                 history.push('/');

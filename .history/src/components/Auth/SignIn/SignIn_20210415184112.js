@@ -11,7 +11,7 @@ const SignIn = ({history}) => {
     const [success, setSuccess] = useState(true);
     const [errorSignIn, setErrorSignIn] = useState('');
 
-    const authContext = useContext(AuthContext);
+    const [authContext, setAuthContext] = useContext(AuthContext);
 
     const clearInputs = () => {
         setEmail('');
@@ -27,7 +27,7 @@ const SignIn = ({history}) => {
                 refreshToken: res.user.refreshToken,
                 isNew: res.additionalUserInfo.isNewUser,
                 uid: res.user.uid}
-                authContext.currentUser = currUser;
+                setAuthContext(currUser);
                 console.log(authContext)
                 setSuccess(true);
                 setErrorSignIn('')
