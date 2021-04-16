@@ -3,13 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 import * as helpers from '../../helpers/linkHelpers';
-import * as serviceDB from '../../services/serviceDB';
 import AuthContext from '../../contexts/AuthContext';
 import { useContext } from 'react';
 
 const CustomNavbar = ({ history }) => {
 
     const authContext = useContext(AuthContext);
+    console.log(authContext);
 
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -72,15 +72,7 @@ const CustomNavbar = ({ history }) => {
                     </Nav>
                 
                 : <Nav>
-                        <Nav.Link
-                            onSelect={(_, e) => {
-                                e.preventDefault();
-                                serviceDB.signOut()
-                                    .then(() => {
-                                        authContext.currentUser = {};
-                                        helpers.onSelectLinkHandler('/', history)
-                                })
-                        }}
+                    <Nav.Link
                         href="/sign-up">
                         Sign out
                     </Nav.Link>

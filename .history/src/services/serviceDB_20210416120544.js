@@ -14,7 +14,7 @@ export const signIn = (email, password) => {
 }
 
 export const signOut = () => {
-    return auth.signOut();
+    
 }
 
 

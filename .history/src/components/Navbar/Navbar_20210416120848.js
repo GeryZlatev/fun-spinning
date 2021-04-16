@@ -10,6 +10,7 @@ import { useContext } from 'react';
 const CustomNavbar = ({ history }) => {
 
     const authContext = useContext(AuthContext);
+    console.log(authContext);
 
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -78,7 +79,6 @@ const CustomNavbar = ({ history }) => {
                                 serviceDB.signOut()
                                     .then(() => {
                                         authContext.currentUser = {};
-                                        helpers.onSelectLinkHandler('/', history)
                                 })
                         }}
                         href="/sign-up">
