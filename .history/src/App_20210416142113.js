@@ -21,7 +21,7 @@ function App() {
         {/* <Route path="/about" /> */}
         <Route path="/sign-up" component={ SignUp}/>
         <Route path="/sign-in" component={ SignIn}/>
-        <Route path="/contacts" component={ Contacts}/>
+        {/* <Route path="/contacts" component={ Contacts}/> */}
       </Switch>
       <Footer/>
       </AuthContext.Provider>
